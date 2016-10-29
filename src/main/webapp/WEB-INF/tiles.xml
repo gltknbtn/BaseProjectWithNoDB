@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+
+    <!-- Master Admin -->
+    <definition name="master-admin.page" template="/public/template/master-admin.jsp">
+        <put-attribute name="header-admin" value="/public/template/header-admin.jsp"/>
+        <put-attribute name="footer-admin" value="/public/template/footer-admin.jsp"/>
+    </definition>
+
+
+    <!-- Master Fadlarec -->
+    <definition name="master_fadlarec.page" template="/public/template/master_fadlarec.jsp">
+        <put-attribute name="header_fadlarec" value="/public/template/header_fadlarec.jsp"/>
+        <put-attribute name="footer_fadlarec" value="/public/template/footer_fadlarec.jsp"/>
+    </definition>
+
+    <!--  Pages -->
+    <definition name="welcomePage" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/welcomePage.jsp"/>
+    </definition>
+    
+    <definition name="articleList" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/articles/articles.jsp"/>
+    </definition>
+    
+    
+    <definition name="users" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/users/users.jsp"/>
+    </definition>
+    
+    <definition name="usercreate" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/users/user-create.jsp"/>
+    </definition>
+    
+    <definition name="useredit" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/users/user-edit.jsp"/>
+    </definition>
+    
+    
+    <definition name="categories" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/categories/categories.jsp"/>
+    </definition>
+    
+    <definition name="categorycreate" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/categories/category-create.jsp"/>
+    </definition>
+      
+    <definition name="categoryedit" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/categories/category-edit.jsp"/>
+    </definition>
+    
+    <!-- Parent Images Pages -->
+    <definition name="parentimages" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/parentimages/parentimages.jsp"/>
+    </definition>
+    
+    <definition name="uploadparentimage" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/parentimages/uploadparentimage.jsp"/>
+    </definition>
+    
+    <!-- MainFace Pages -->
+    <definition name="mainfaces" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/mainfaces/mainfaces.jsp"/>
+    </definition>
+    
+    <definition name="uploadmainface" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/mainfaces/uploadmainface.jsp"/>
+    </definition>
+    
+      
+    <definition name="batchmainface" extends="master-admin.page">
+        <put-attribute name="body-admin" value="/protected/mainfaces/batchmainface.jsp"/>
+    </definition>
+  
+    
+    
+    <definition name="login" extends="master-admin.page">
+        <put-attribute name="header-admin" value=""/>
+        <put-attribute name="footer-admin" value=""/>
+        <put-attribute name="body-admin" value="/public/login.jsp"/>
+    </definition>
+    
+     <definition name="fadlarecmain" extends="master_fadlarec.page">
+      <put-attribute name="header_fadlarec" value="/public/template/header_fadlarec.jsp"/>
+        <put-attribute name="footer_fadlarec" value="/public/template/footer_fadlarec.jsp"/>
+        <put-attribute name="body_fadlarec" value="/public/mainpage/mainpage_fadlarec.jsp"/>
+    </definition>
+    
+    
+</tiles-definitions>
